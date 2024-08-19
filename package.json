@@ -6,7 +6,8 @@
     "dev": "concurrently \"next dev\" \"ts-node lib/websocketServer.ts\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",

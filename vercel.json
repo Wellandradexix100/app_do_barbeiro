@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["prisma/schema.prisma"] }
+    }
+  ],
+  "build": {
+    "env": {
+      "DATABASE_URL": "@postgresql://neondb_owner:xztslP98CpWF@ep-dawn-brook-a5rp2x86.us-east-2.aws.neon.tech/neondb?sslmode=require"
+    }
+  },
+  "postbuild": "prisma generate"
+}
